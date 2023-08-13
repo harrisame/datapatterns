@@ -1,6 +1,6 @@
 .. include:: ../README.rst
 
-Welcome to Craigslist documentation!
+Welcome to ROCM documentation!
 ===================================
 
 .. note::
