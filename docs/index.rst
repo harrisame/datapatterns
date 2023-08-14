@@ -14,8 +14,7 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   Home <self>
    Behavioral/index
    Structural/index
    Creational/index
-   More/index
+   more/index
