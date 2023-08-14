@@ -1,36 +1,66 @@
-ROCm Documentation Core Utilities
-==================
+`Data Mapper`__
+===============
 
 Purpose
+-------
 
-This repository is comprised of utilities, styling, scripts, and additional HTML content that is common to all ROCm projects' documentation. This greatly aids in maintaining the documentation, as any change to the appearance only needs to be modified in one location.
-Common elements covered
+A Data Mapper, is a Data Access Layer that performs bidirectional
+transfer of data between a persistent data store (often a relational
+database) and an in memory data representation (the domain layer). The
+goal of the pattern is to keep the in memory representation and the
+persistent data store independent of each other and the data mapper
+itself. The layer is composed of one or more mappers (or Data Access
+Objects), performing the data transfer. Mapper implementations vary in
+scope. Generic mappers will handle many different domain entity types,
+dedicated mappers will handle one or a few.
 
-    Javascript tweaks for tables with long variable names, as Sphinx' default rendering is problematic.
-    HTML for a header and footer for the documentation page.
-    Common Sphinx configuration options for ROCm documentation processes.
+The key point of this pattern is, unlike Active Record pattern, the data
+model follows Single Responsibility Principle.
 
-Use
+Examples
+--------
 
-    Install this repository as a Python package using pip, for example pip install git+https://github.com/RadeonOpenCompute/rocm-docs-core.git.
-    From the rocm_docs package import the function setup_rocm_docs into conf.py for the ReadTheDocs project.
-    Call exactly the following, replacing <PROJECT NAME HERE> with the name of the project.
+-  DB Object Relational Mapper (ORM) : Doctrine2 uses DAO named as
+   "EntityRepository"
 
-from rocm_docs import ROCmDocs
+UML Diagram
+-----------
 
-docs_core = ROCmDocs(<PROJECT NAME HERE>)
-docs_core.run_doxygen()  # Only if Doxygen is required for this project
-docs_core.setup()
+.. image:: uml/uml.png
+   :alt: Alt DataMapper UML Diagram
+   :align: center
 
-for sphinx_var in ROCmDocs.SPHINX_VARS:
-    globals()[sphinx_var] = getattr(docs_core, sphinx_var)
+Code
+----
 
-Documentation
+You can also find this code on `GitHub`_
 
-The rocm-docs-core documentation is viewable at https://rocm.docs.amd.com/projects/rocm-docs-core/en/latest/
+User.php
 
-To build the rocm-docs-core documentation locally, run the commands below:
+.. literalinclude:: User.php
+   :language: php
+   :linenos:
 
-pip install -r requirements.txt
-cd docs
-python3 -m sphinx -T -E -b html -d _build/doctrees -D language=en . _build/html
+UserMapper.php
+
+.. literalinclude:: UserMapper.php
+   :language: php
+   :linenos:
+
+StorageAdapter.php
+
+.. literalinclude:: StorageAdapter.php
+    :language: php
+    :linenos:
+
+Test
+----
+
+Tests/DataMapperTest.php
+
+.. literalinclude:: Tests/DataMapperTest.php
+   :language: php
+   :linenos:
+
+.. _`GitHub`: https://github.com/domnikl/DesignPatternsPHP/tree/main/Structural/DataMapper
+.. __: http://en.wikipedia.org/wiki/Data_mapper_pattern
