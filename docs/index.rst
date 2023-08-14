@@ -1,6 +1,6 @@
 .. include:: ../README.rst
 
-Welcome to ROCM documentation!
+Welcome to Data Mapper documentation!
 ===================================
 
 .. note::
