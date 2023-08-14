@@ -15,7 +15,7 @@ Contents
    :maxdepth: 2
 
    style-guide
-   Behavioral/index
-   Structural/index
-   Creational/index
-   more/index
+   Behavioral/README
+   Structural/README
+   Creational/README
+   More/README
