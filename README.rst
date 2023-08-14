@@ -1,4 +1,4 @@
-`Data Mapper`__
+Data Mapper
 ===============
 
 Purpose
@@ -22,13 +22,6 @@ Examples
 
 -  DB Object Relational Mapper (ORM) : Doctrine2 uses DAO named as
    "EntityRepository"
-
-UML Diagram
------------
-
-.. image:: uml/uml.png
-   :alt: Alt DataMapper UML Diagram
-   :align: center
 
 Code
 ----
@@ -63,4 +56,3 @@ Tests/DataMapperTest.php
    :linenos:
 
 .. _`GitHub`: https://github.com/domnikl/DesignPatternsPHP/tree/main/Structural/DataMapper
-.. __: http://en.wikipedia.org/wiki/Data_mapper_pattern
