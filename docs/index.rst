@@ -7,10 +7,12 @@ Welcome to Data Mapper documentation!
 
    This project is under active development.
 
+********
 Contents
---------
+********
 
 .. toctree::
+   :maxdepth: 2
 
    Home <self>
    Behavioral/index
