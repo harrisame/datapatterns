@@ -13,5 +13,7 @@ Contents
 .. toctree::
 
    Home <self>
-   usage
-   api
+   Behavioral/index
+   Structural/index
+   Creational/index
+   More/index
