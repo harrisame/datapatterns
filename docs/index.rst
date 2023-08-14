@@ -14,6 +14,7 @@ Contents
 .. toctree::
    :maxdepth: 2
 
+   style-guide
    Behavioral/index
    Structural/index
    Creational/index
