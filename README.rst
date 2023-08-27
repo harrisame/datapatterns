@@ -1,58 +1,45 @@
-Data Mapper
-===============
+===================
+DesignPatternsPHP
+===================
 
-Purpose
--------
+.. image:: https://github.com/domnikl/DesignPatternsPHP/workflows/CI/badge.svg
+   :target: https://github.com/domnikl/DesignPatternsPHP/actions
+.. image:: https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square
+   :target: https://paypal.me/DominikLiebler
 
-A Data Mapper, is a Data Access Layer that performs bidirectional
-transfer of data between a persistent data store (often a relational
-database) and an in memory data representation (the domain layer). The
-goal of the pattern is to keep the in memory representation and the
-persistent data store independent of each other and the data mapper
-itself. The layer is composed of one or more mappers (or Data Access
-Objects), performing the data transfer. Mapper implementations vary in
-scope. Generic mappers will handle many different domain entity types,
-dedicated mappers will handle one or a few.
+`Read the Docs of DesignPatternsPHP <http://designpatternsphp.readthedocs.org>`_ or 
+`Download as PDF/Epub <https://readthedocs.org/projects/designpatternsphp/downloads/>`_
 
-The key point of this pattern is, unlike Active Record pattern, the data
-model follows Single Responsibility Principle.
+This is a collection of known design patterns and some sample codes on how to implement them in PHP. Every pattern has a small list of examples.
 
-Examples
---------
+I think the problem with patterns is that often people do know them but don't know when to apply which.
 
--  DB Object Relational Mapper (ORM) : Doctrine2 uses DAO named as
-   "EntityRepository"
+Installation
+------------
 
-Code
-----
+You should look at and run the tests to see what happens in the example.
+To do this, you should install dependencies with `Composer` first::
 
-You can also find this code on `GitHub`_
+   $ composer install
 
-User.php
+Read more about how to install and use `Composer` on your local machine `here <https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx>`_.
 
-.. literalinclude:: User.php
-   :language: php
-   :linenos:
+To run the tests use `phpunit`::
 
-UserMapper.php
+   $ ./vendor/bin/phpunit
 
-.. literalinclude:: UserMapper.php
-   :language: php
-   :linenos:
+Using Docker (optional)
+-----------------------
 
-StorageAdapter.php
+You can optionally build and browse the documentation using `Docker for Mac, Windows or Linux <https://docs.docker.com/compose/install/>`_.
 
-.. literalinclude:: StorageAdapter.php
-    :language: php
-    :linenos:
+Just run::
 
-Test
-----
+   $ docker-compose up --build
 
-Tests/DataMapperTest.php
+Go to `http://localhost:8080/ <http://localhost:8080/>`_ to read the generated documentation.
 
-.. literalinclude:: Tests/DataMapperTest.php
-   :language: php
-   :linenos:
+If you want to localize your documentation you can pass the locale as an argument to the docker build::
 
-.. _`GitHub`: https://github.com/domnikl/DesignPatternsPHP/tree/main/Structural/DataMapper
+   $ docker-compose build --build-arg language=de
+   $ docker-compose up
