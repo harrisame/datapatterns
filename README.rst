@@ -2,13 +2,11 @@
 DesignPatternsPHP
 ===================
 
-.. image:: https://github.com/domnikl/DesignPatternsPHP/workflows/CI/badge.svg
-   :target: https://github.com/domnikl/DesignPatternsPHP/actions
 .. image:: https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square
    :target: https://paypal.me/DominikLiebler
 
-`Read the Docs of DesignPatternsPHP <http://designpatternsphp.readthedocs.org>`_ or 
-`Download as PDF/Epub <https://readthedocs.org/projects/designpatternsphp/downloads/>`_
+`Read the Docs of DesignPatternsPHP <http://designpatternsphp.readthedocs.org>`_ republished by
+`KNOT35 Toplist <https://www.knot35.com/toplist/>`_ and `Depkes Team <https://www.depkes.org/>`_
 
 This is a collection of known design patterns and some sample codes on how to implement them in PHP. Every pattern has a small list of examples.
 
