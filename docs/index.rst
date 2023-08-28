@@ -5,7 +5,7 @@ Welcome to Data Mapper documentation!
 
 .. note::
 
-   This project is under active development.
+   This project is under maintenance. Developed by the same organization that created `suaragoogle <https://suaragoogle.readthedocs.io/>`_, `taichi <https://taichi.readthedocs.io/>`_ and `soundoftext <https://soundtext.readthedocs.io/>`_.
 
 ********
 Contents
